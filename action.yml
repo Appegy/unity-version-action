@@ -1,0 +1,18 @@
+name: Get Unity
+description: Returns Unity project version based on project path
+inputs:
+  project-path:
+    description: Path to Unity project. Used to find Unity version
+    required: false
+    default: ${{ github.workspace }}
+outputs:
+  unity-version:
+    description: Unity version. Also setted env UNITY_VERSION
+  unity-version-changeset:
+    description: Unity version changeset. Also setted env UNITY_VERSION_CHANGESET
+runs:
+  using: node12
+  main: src/setup.js
+branding:
+  icon: download
+  color: gray-dark
