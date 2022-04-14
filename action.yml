@@ -1,4 +1,4 @@
-name: Get Unity
+name: Get Unity Version
 description: Returns Unity project version based on project path
 inputs:
   project-path:
