@@ -8,6 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{EA5BD5AB
 		.gitignore = .gitignore
 		.editorconfig = .editorconfig
 		.gitattributes = .gitattributes
+		Dockerfile = Dockerfile
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Appegy.GitHub.UnityVersionAction", "Appegy.GitHub.UnityVersionAction\Appegy.GitHub.UnityVersionAction.csproj", "{54C48645-CDFD-4440-AA58-7EE52786E942}"

@@ -1,18 +1,33 @@
-name: Get Unity Version
-description: Returns Unity project version based on project path
+name: Get Unity version and changeset
+description: Returns Unity version and changeset based on project path
 inputs:
-  project-path:
+  project_path:
     description: Path to Unity project. Used to find Unity version
-    required: false
+    required: true
     default: ${{ github.workspace }}
+  version_env:
+    description: The name of environment variable to store the version. Keep empty if you don't want to store it.
+    required: false
+    default: ""
+  changeset_env:
+    description: The name of environment variable to store the changeset. Keep empty if you don't want to store it.
+    required: false
+    default: ""
 outputs:
-  unity-version:
-    description: Unity version. Also setted env UNITY_VERSION
-  unity-version-changeset:
-    description: Unity version changeset. Also setted env UNITY_VERSION_CHANGESET
+  version:
+    description: Unity version.
+  changeset:
+    description: Unity version changeset.
 runs:
-  using: node12
-  main: src/setup.js
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - '--project_path'
+    - ${{ inputs.project_path }}
+    - '--version_env'
+    - ${{ inputs.version_env }}
+    - '--changeset_env'
+    - ${{ inputs.changeset_env }}
 branding:
-  icon: download
+  icon: box
   color: gray-dark
