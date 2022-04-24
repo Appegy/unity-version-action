@@ -24,12 +24,13 @@ Console.WriteLine($"::set-output name=changeset::{version.Changeset}");
 if (!string.IsNullOrEmpty(input.VersionEnv))
 {
     Console.WriteLine($"Setting environment variable {input.VersionEnv} to {version.Version}");
-    Environment.SetEnvironmentVariable(input.VersionEnv, version.Version);
+    Console.WriteLine($"::exportVariable name={input.VersionEnv}::{version.Version}");
 }
 if (!string.IsNullOrEmpty(input.ChangesetEnv))
 {
+    //exportVariable
     Console.WriteLine($"Setting environment variable {input.ChangesetEnv} to {version.Changeset}");
-    Environment.SetEnvironmentVariable(input.ChangesetEnv, version.Changeset);
+    Console.WriteLine($"::exportVariable name={input.ChangesetEnv}::{version.Changeset}");
 }
 
 static ActionInputs? parseArguments(IEnumerable<string> args)
