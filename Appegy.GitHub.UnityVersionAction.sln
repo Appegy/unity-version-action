@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Meta", "Meta", "{EA5BD5AB-D6CF-4CC5-9FAC-7A71E83A25B1}"
+	ProjectSection(SolutionItems) = preProject
+		action.yml = action.yml
+		LICENSE = LICENSE
+		README.md = README.md
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Appegy.GitHub.UnityVersionAction", "Appegy.GitHub.UnityVersionAction\Appegy.GitHub.UnityVersionAction.csproj", "{54C48645-CDFD-4440-AA58-7EE52786E942}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54C48645-CDFD-4440-AA58-7EE52786E942}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54C48645-CDFD-4440-AA58-7EE52786E942}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54C48645-CDFD-4440-AA58-7EE52786E942}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54C48645-CDFD-4440-AA58-7EE52786E942}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
