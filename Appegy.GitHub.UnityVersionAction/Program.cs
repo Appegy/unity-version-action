@@ -16,14 +16,19 @@ if (version == null)
     return;
 }
 
+Console.WriteLine($"{nameof(version.Version)}: {version.Version}");
+Console.WriteLine($"{nameof(version.Changeset)}: {version.Changeset}");
 Console.WriteLine($"::set-output name=version::{version.Version}");
 Console.WriteLine($"::set-output name=changeset::{version.Changeset}");
+
 if (!string.IsNullOrEmpty(input.VersionEnv))
 {
+    Console.WriteLine($"Setting environment variable {input.VersionEnv} to {version.Version}");
     Environment.SetEnvironmentVariable(input.VersionEnv, version.Version);
 }
 if (!string.IsNullOrEmpty(input.ChangesetEnv))
 {
+    Console.WriteLine($"Setting environment variable {input.ChangesetEnv} to {version.Changeset}");
     Environment.SetEnvironmentVariable(input.ChangesetEnv, version.Changeset);
 }
 
